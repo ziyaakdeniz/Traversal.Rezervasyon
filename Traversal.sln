@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Traversal.Web", "Traversal.Web\Traversal.Web.csproj", "{F502E4B6-9F90-4A16-B0C1-5D311AD0D09B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Traversal.Web", "Traversal.Web\Traversal.Web.csproj", "{F502E4B6-9F90-4A16-B0C1-5D311AD0D09B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{D2D4443C-F6EB-41AE-A5B2-42234D557DD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{D2D4443C-F6EB-41AE-A5B2-42234D557DD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{7A340233-4C56-4DBE-A8D5-3F905A5E314B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{7EDAD123-E31B-45B4-AA6C-6D718F317F21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{D2D4443C-F6EB-41AE-A5B2-42234D557DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2D4443C-F6EB-41AE-A5B2-42234D557DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2D4443C-F6EB-41AE-A5B2-42234D557DD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A340233-4C56-4DBE-A8D5-3F905A5E314B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A340233-4C56-4DBE-A8D5-3F905A5E314B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A340233-4C56-4DBE-A8D5-3F905A5E314B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A340233-4C56-4DBE-A8D5-3F905A5E314B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDAD123-E31B-45B4-AA6C-6D718F317F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDAD123-E31B-45B4-AA6C-6D718F317F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDAD123-E31B-45B4-AA6C-6D718F317F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDAD123-E31B-45B4-AA6C-6D718F317F21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
