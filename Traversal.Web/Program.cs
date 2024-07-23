@@ -1,4 +1,11 @@
+using BusinessLayer.Abstact;
+using BusinessLayer.Concrete;
+using BusinessLayer.Configration;
 using DataAccessLayer;
+using DataAccessLayer.Shared.Abstract;
+
+using DataAccessLayer.Shared.Concrete;
+using EntityLayer.Concrete;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,7 +14,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.BusinessDI();
+builder.Services.RepositoryDI();
+
 
 var app = builder.Build();
 
