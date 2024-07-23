@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Destination
+    public class Destination : BaseModel
     {
-        public int Id { get; set; }
+       // public int Id { get; set; }
 
         public string? City { get; set; }
 
@@ -22,6 +22,6 @@ namespace EntityLayer.Concrete
 
         public int Capacity { get; set; }
 
-        public bool Status { get; set; }=true;
+      //  public bool Status { get; set; }=true;
     }
 }

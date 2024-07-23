@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Newslater : BaseModel
+    public class BaseModel
     {
-     //   public int Id { get; set; } 
+        public int Id { get; set; }
 
-        public string? Mail { get; set; }
+        public bool Status { get; set; }
 
-      //  public bool Status { get; set; }=true;
 
     }
 }

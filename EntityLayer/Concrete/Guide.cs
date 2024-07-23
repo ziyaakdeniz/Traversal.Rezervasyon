@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Guide
+    public class Guide : BaseModel
     {
-        public int Id { get; set; }
+      //  public int Id { get; set; }
 
         public string? Name { get; set; }
 
@@ -20,6 +20,6 @@ namespace EntityLayer.Concrete
 
         public string? TwitterURL { get; set; }
 
-        public bool Status { get; set; }=true;
+      //  public bool Status { get; set; }=true;
     }
 }

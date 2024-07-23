@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Contact
+    public class Contact : BaseModel
     {
-        public int Id { get; set; }
+     //   public int Id { get; set; }
 
         public string? Address { get; set; }
 
@@ -20,7 +20,7 @@ namespace EntityLayer.Concrete
 
         public string? MapLocation { get; set; }
 
-        public bool Status { get; set; }=true;
+      //  public bool Status { get; set; }=true;
 
 
     }

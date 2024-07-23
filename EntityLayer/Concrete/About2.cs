@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class About2
+    public class About2:BaseModel
     {
-        public int Id { get; set; }
+       // public int Id { get; set; }
 
         public string? Title1 { get; set; }
 
@@ -18,7 +18,7 @@ namespace EntityLayer.Concrete
 
         public string? Image { get; set; }
 
-        public bool Status { get; set; }=true;
+       // public bool Status { get; set; }=true;
 
 
     }

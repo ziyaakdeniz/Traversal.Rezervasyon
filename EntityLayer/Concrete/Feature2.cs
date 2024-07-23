@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Feature2
+    public class Feature2 : BaseModel
     {
-        public int Id { get; set; }
+       // public int Id { get; set; }
 
         public string? Title { get; set; }
 
@@ -16,6 +16,6 @@ namespace EntityLayer.Concrete
 
         public string? Image { get; set; }
 
-        public bool Status { get; set; }=true;
+      //  public bool Status { get; set; }=true;
     }
 }
