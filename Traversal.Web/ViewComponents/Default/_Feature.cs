@@ -1,21 +1,23 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer;
+using DataAccessLayer.Shared.Abstract;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Traversal.Web.ViewComponents.Default
 {
     public class _Feature:ViewComponent
     {
-        private readonly FeatureService _featureService;
+        private readonly IRepository<Feature> _repository;
 
-        public _Feature(FeatureService featureService)
+        public _Feature(IRepository<Feature> repository)
         {
-            _featureService = featureService;
+            _repository = repository;
         }
 
         public IViewComponentResult Invoke()
         {
-            var result=_featureService.GetAll().ToList();
+            var result=_repository.GetAll().ToList();
             return View(result);
         }
     }
