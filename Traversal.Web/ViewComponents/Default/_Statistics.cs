@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Traversal.Web.ViewComponents.Default
 {
 
-
     public class _Statistics : ViewComponent
     {
         private readonly ApplicationDbContext _db;
@@ -18,8 +17,6 @@ namespace Traversal.Web.ViewComponents.Default
         {
             ViewBag.v1 = _db.Destinations.Count();
             ViewBag.v2= _db.Guides.Count();
-          
-
             return View();
         }
     }
