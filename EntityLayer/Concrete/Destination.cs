@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,12 @@ namespace EntityLayer.Concrete
 
         public int Capacity { get; set; }
 
-      //  public bool Status { get; set; }=true;
+        public string? CoverImage { get; set; }
+
+        public string? Details1 { get; set; }
+
+        public string? Details2 { get; set; }
+
+        public string? Image2 {  get; set; }    
     }
 }

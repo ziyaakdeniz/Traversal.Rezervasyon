@@ -1,0 +1,92 @@
+﻿@model Destination
+
+@{
+    ViewData["Title"] = "DestinationalDetails";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+
+<body> 
+    <!-- about breadcrumb -->
+    <section class="w3l-about-breadcrumb text-left">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+            <div class="container">
+                <h2 class="title">Tur Detayları</h2>
+                <ul class="breadcrumbs-custom-path mt-2">
+                    <li><a asp-action="Index" asp-controller="Default">Ana Sayfa</a></li>
+                    <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Rehber Yorumları </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //about breadcrumb -->
+    <!--/blog-->
+    <div class="py-5 w3l-homeblock1 text-center">
+        <div class="container mt-md-3">
+            <h3 class="blog-desc-big text-center mb-4">
+                Your Blog Posts are Boring? Here are 9 Tips for
+                Making your Writing more Interesting
+            </h3>
+            <div class="blog-post-align">
+                <div class="blog-post-img">
+                    <a href="#"><img src="assets/images/c1.jpg" alt="" class="rounded-circle img-fluid" /></a>
+                </div>
+                <div class="blog-post-info">
+                    <div class="author align-items-center mb-1">
+                        <a href="#">Johnson smith</a> in <a href="#url">Traversal</a>
+                    </div>
+                    <ul class="blog-meta">
+                        <li class="meta-item blog-lesson">
+                            <span class="meta-value"> June 13, 2020 </span>
+                        </li>
+                        <li class="meta-item blog-students">
+                            <span class="meta-value"> 6min read</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="blog-post-main w3l-homeblock1">
+        <!--/blog-post-->
+        <div class="blog-content-inf pb-5">
+            </div>
+        </section>
+
+    <!-- Template JavaScript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+    <!--/MENU-JS-->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!--//MENU-JS-->
+
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+
