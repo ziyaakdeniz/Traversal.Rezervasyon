@@ -39,6 +39,8 @@ namespace DataAccessLayer
 
         public virtual DbSet<Testimonial> Testimonials { get; set; }
 
+        public virtual DbSet<Comment> Comments { get; set; }
+
 
     }
 }

@@ -30,5 +30,7 @@ namespace EntityLayer.Concrete
         public string? Details2 { get; set; }
 
         public string? Image2 {  get; set; }    
+
+        public virtual ICollection<Comment> Comments { get; set; }=new List<Comment>();
     }
 }

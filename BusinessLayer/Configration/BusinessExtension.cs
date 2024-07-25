@@ -27,6 +27,8 @@ namespace BusinessLayer.Configration
             services.AddScoped<INewslaterService, NewslaterService>();
             services.AddScoped<ISubAboutService, SubAboutService>();
             services.AddScoped<ITestimonialService, TestimonialService>();
+            services.AddScoped<ICommentService, CommentService>();
+
 
         }
 
@@ -42,6 +44,7 @@ namespace BusinessLayer.Configration
             repos.AddScoped<IGuideRepository, GuideRepository>();
             repos.AddScoped<INewslaterRepository, Newslaterrepository>();
             repos.AddScoped<ITestimonialRepository, TestimonialRepository>();
+            repos.AddScoped<ICommentRepository, CommentRepository>();
         }
     }
 }

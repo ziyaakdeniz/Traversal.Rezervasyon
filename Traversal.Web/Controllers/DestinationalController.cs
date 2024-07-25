@@ -21,6 +21,7 @@ namespace Traversal.Web.Controllers
         [HttpGet]
         public ActionResult DestinationalDetails(int id)
         {
+            ViewBag.Id = id;
             return View(_destinationService.GetById(id));
         }
         [HttpPost]
