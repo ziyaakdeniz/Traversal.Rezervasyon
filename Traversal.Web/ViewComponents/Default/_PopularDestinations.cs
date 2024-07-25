@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿using BusinessLayer.Abstact;
+using BusinessLayer.Concrete;
 using DataAccessLayer.Absract;
 using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
@@ -9,16 +10,16 @@ namespace Traversal.Web.ViewComponents.Default
 {
     public class _PopularDestinations:ViewComponent
     {
-        private readonly IDestinationRepository _destinationRepository;
+       private readonly IDestinationService _destinationService;
 
-        public _PopularDestinations(IDestinationRepository destinationRepository)
+        public _PopularDestinations(IDestinationService destinationService)
         {
-            _destinationRepository = destinationRepository;
+            _destinationService = destinationService;
         }
 
         public IViewComponentResult Invoke()
         {
-            var result= _destinationRepository.GetAll().ToList();
+            List<Destination> result= _destinationService.GetAll().ToList();
             return View(result);
         }
     }
