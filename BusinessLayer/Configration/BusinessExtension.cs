@@ -28,6 +28,8 @@ namespace BusinessLayer.Configration
             services.AddScoped<ISubAboutService, SubAboutService>();
             services.AddScoped<ITestimonialService, TestimonialService>();
             services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IAppRoleService, AppRoleService>();
+            services.AddScoped<IAppUserService, AppUserService>();
 
 
         }
@@ -45,6 +47,8 @@ namespace BusinessLayer.Configration
             repos.AddScoped<INewslaterRepository, Newslaterrepository>();
             repos.AddScoped<ITestimonialRepository, TestimonialRepository>();
             repos.AddScoped<ICommentRepository, CommentRepository>();
+            repos.AddScoped<IAppRoleRepository, AppRoleRepository>();
+            repos.AddScoped<IAppUserRepository, AppUserRepository>();
         }
     }
 }

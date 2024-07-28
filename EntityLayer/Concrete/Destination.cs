@@ -7,11 +7,16 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Destination : BaseModel
+    public class Destination
     {
-       // public int Id { get; set; }
+		// public int Id { get; set; }
 
-        public string? City { get; set; }
+		public int Id { get; set; }
+
+		public bool Status { get; set; } = false;
+
+
+		public string? City { get; set; }
 
         public string? DayNigth { get; set; }
 

@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class SubAbout : BaseModel
+    public class SubAbout
     {
-     //   public int Id { get; set; }
+		//   public int Id { get; set; }
+		public int Id { get; set; }
 
-        public string? Title { get; set; }
+		public bool Status { get; set; }=false;
+
+		public string? Title { get; set; }
 
         public string? Description { get; set; }
 

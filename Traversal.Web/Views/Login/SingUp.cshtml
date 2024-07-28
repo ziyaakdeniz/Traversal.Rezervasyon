@@ -1,4 +1,4 @@
-﻿
+﻿@model UserRegisterWM
 @{
     Layout = null;
 }
@@ -22,31 +22,31 @@
 	<div class="wrapper">
 		<div class="inner">
 			<img src="~/colorlib-regform-26/images/image-1.png" alt="" class="image-1">
-			<form action="">
+			<form method="post">
 				<h3>Yeni Hesap</h3>
 				<div class="form-holder">
 					<span class="lnr lnr-user"></span>
-					<input type="text" class="form-control" placeholder="Adınız">
+					<input type="text" class="form-control" placeholder="Adınız" name="Name">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-map"></span>
-					<input type="text" class="form-control" placeholder="Soyadınız">
+					<input type="text" class="form-control" placeholder="Soyadınız" name="Surname">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-envelope"></span>
-					<input type="text" class="form-control" placeholder="E-posta adresiniz">
+					<input type="text" class="form-control" placeholder="E-posta adresiniz" name="Mail">
 				</div>
 				<div class="form-holder">
-					<span class="lnr lnr-phone-handset"></span>
-					<input type="text" class="form-control" placeholder="Telefon numaranız">
+					<span class="lnr lnr-user"></span>
+					<input type="text" class="form-control" placeholder="Kullanıcı Adınız" name="UserName">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-lock"></span>
-					<input type="password" class="form-control" placeholder="Şifreniz">
+					<input type="password" class="form-control" placeholder="Şifreniz" name="Password">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-keyboard"></span>
-					<input type="password" class="form-control" placeholder="Şifre Onayı">
+					<input type="password" class="form-control" placeholder="Şifre Onayı" name="ConfirmPassword">
 				</div>
 				<button>
 					<span>Kayıt Ol</span>

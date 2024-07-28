@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Feature : BaseModel
+    public class Feature
     {
-       // public int Id { get; set; }
+		// public int Id { get; set; }
 
-        public string? Title { get; set; }
+		public int Id { get; set; }
+
+		public bool Status { get; set; }=false;
+
+		public string? Title { get; set; }
 
         public string? Description { get; set; }
 

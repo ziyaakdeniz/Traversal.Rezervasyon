@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Comment:BaseModel
-
+    public class Comment
     {
-        public string ComentUser { get; set; }
+		public int Id { get; set; }
+
+		public bool Status { get; set; } = false;
+
+		public string ComentUser { get; set; }
 
         public DateTime ComentDate { get; set; }
 
@@ -18,9 +21,6 @@ namespace EntityLayer.Concrete
         public  int DestinationId {  get; set; }
 
         public virtual Destination Destination { get; set; }
-
-
-
 
     }
 }

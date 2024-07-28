@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Shared.Abstract
 {
-    public interface IRepository<T> where T : BaseModel
+    public interface IRepository<T> where T : class
     {
         IQueryable<T> GetAll();
 
