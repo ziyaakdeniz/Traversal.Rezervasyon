@@ -13,20 +13,23 @@ namespace Traversal.Web.Controllers
 	public class LoginController : Controller
 	{
 		private readonly UserManager<AppUser> _userManager;
+		private readonly SignInManager<AppUser> _signInManager;
 
-		public LoginController(UserManager<AppUser> userManager)
-		{
-			_userManager = userManager;
-		}
+       
+        public LoginController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+        }
 
-		[HttpGet]
+        [HttpGet]
 		public IActionResult SingUp()
 		{
 			return View();
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> SignUp(UserRegisterWM appUser)
+		public async Task<IActionResult> SingUp(UserRegisterWM appUser)
 		{
 			AppUser user = new AppUser()
 			{
@@ -54,14 +57,29 @@ namespace Traversal.Web.Controllers
 			return View(appUser);
 		}
 
+        [HttpGet]
+        public IActionResult SingIn()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> SingIn(UserSignInVM  userSignInVM)
+        {
+            //if (ModelState.IsValid)
+            //{
+                var result = await _signInManager.PasswordSignInAsync(userSignInVM.username, userSignInVM.password, false, true);
+                if (result.Succeeded)
+                {
+					// return RedirectToAction("Index", "Profile", new { area = "Member" });
+					return RedirectToAction("/Default/Index");
+                }
+                else
+                {
+                    return RedirectToAction("SingIn", "Login");
+                }
+            //}
+            return View();
+        }
 
-
-		[HttpGet]
-		public IActionResult SingIn()
-		{
-			return View();
-		}
-
-
-	}
+    }
 }

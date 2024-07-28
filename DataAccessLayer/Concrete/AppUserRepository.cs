@@ -28,6 +28,7 @@ namespace DataAccessLayer.Concrete
 		//}
 		public AppUserRepository(ApplicationDbContext context) : base(context)
 		{
+
 		}
 	}
 }
