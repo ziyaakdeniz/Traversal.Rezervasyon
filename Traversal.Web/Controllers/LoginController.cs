@@ -44,7 +44,7 @@ namespace Traversal.Web.Controllers
 
 				if (result.Succeeded)
 				{
-					return RedirectToAction("SignIn");
+					return RedirectToAction("SingIn");
 				}
 				else
 				{
@@ -70,8 +70,8 @@ namespace Traversal.Web.Controllers
                 var result = await _signInManager.PasswordSignInAsync(userSignInVM.username, userSignInVM.password, false, true);
                 if (result.Succeeded)
                 {
-					// return RedirectToAction("Index", "Profile", new { area = "Member" });
-					return RedirectToAction("/Default/Index");
+					 return RedirectToAction("Index", "Profile", new { area = "Member" });
+					//return RedirectToAction("/Default/Index");
                 }
                 else
                 {
