@@ -17,8 +17,8 @@ namespace EntityLayer.Concrete
 
 		public string? Gender { get; set; }
 
-		//public List<Reservation> Reservations { get; set; }
+		public virtual ICollection<Reservation> Reservations { get; set; }= new List<Reservation>();
 
-		//public List<Comment> Comments { get; set; }
+	
 	}
 }

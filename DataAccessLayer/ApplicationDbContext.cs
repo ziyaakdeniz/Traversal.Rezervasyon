@@ -42,6 +42,8 @@ namespace DataAccessLayer
 
         public virtual DbSet<Comment> Comments { get; set; }
 
+        public virtual DbSet<Reservation> Reservations { get; set; }
+
       //  public virtual DbSet<AppUser> AspNetUsers {  get; set; }
 
         

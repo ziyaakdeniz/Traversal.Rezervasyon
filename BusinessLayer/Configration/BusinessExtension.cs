@@ -30,6 +30,7 @@ namespace BusinessLayer.Configration
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<IAppRoleService, AppRoleService>();
             services.AddScoped<IAppUserService, AppUserService>();
+            services.AddScoped<IReservationService, ReservationService>();
 
 
         }
@@ -49,6 +50,7 @@ namespace BusinessLayer.Configration
             repos.AddScoped<ICommentRepository, CommentRepository>();
             repos.AddScoped<IAppRoleRepository, AppRoleRepository>();
             repos.AddScoped<IAppUserRepository, AppUserRepository>();
+            repos.AddScoped<IReservationRepository, ReservationRepository>();
         }
     }
 }
