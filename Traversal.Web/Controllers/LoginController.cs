@@ -57,27 +57,30 @@ namespace Traversal.Web.Controllers
 			return View(appUser);
 		}
 
+
         [HttpGet]
         public IActionResult SingIn()
         {
             return View();
         }
+
+
         [HttpPost]
         public async Task<IActionResult> SingIn(UserSignInVM  userSignInVM)
         {
-            //if (ModelState.IsValid)
-            //{
+            if (ModelState.IsValid)
+            {
                 var result = await _signInManager.PasswordSignInAsync(userSignInVM.username, userSignInVM.password, false, true);
                 if (result.Succeeded)
                 {
 					 return RedirectToAction("Index", "Profile", new { area = "Member" });
-					//return RedirectToAction("/Default/Index");
+					 //return RedirectToAction("Index","Destinational");
                 }
                 else
                 {
                     return RedirectToAction("SingIn", "Login");
                 }
-            //}
+            }
             return View();
         }
 
